@@ -26,7 +26,6 @@ class Song
     song = self.new
     song.name = song_attributes[1]
     song.artist_name = song_attributes[0]
-    end
     song
   end
 end
