@@ -53,7 +53,7 @@ class Song
     song_artist = filename.split(".").shift
     song = self.new
     song.name = song_attributes
-    song.artist_name = song_attributes
+    song.artist_name =
     song
   end
 end
