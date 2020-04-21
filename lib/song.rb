@@ -38,12 +38,16 @@ class Song
   end 
   
   def self.find_or_create_by_name(song_name)
-      if self.find_by_name(song_name)
+    if self.find_by_name(song_name)
         self.find_by_name(song_name)
-      else
+    else
         self.create_by_name(song_name)
-      end 
+    end 
   end 
+    
+    def self.alphabetical
+      @@all.sort_by{|song| song.name}
+    end
     
   def self.new_from_filename(filename)
     song_attributes = filename.split("-")
