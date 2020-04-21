@@ -33,6 +33,7 @@ class Song
     @all.each do |song|
       if song.name == song.song_name
         song.song_name
+      end
     end 
   end 
     
