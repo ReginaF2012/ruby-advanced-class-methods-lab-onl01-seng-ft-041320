@@ -1,3 +1,4 @@
+require 'pry'
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -9,24 +10,24 @@ class Song
   def save
     self.class.all << self
   end
-  
-  def self.create
+
+  def self.create #class constructor
     song = self.new
-    @@all << song
+    self.all << song
     song
-  end 
-  
-  def self.new_by_name(name)
-    song = self.new 
-    song.name = name
+  end
+
+  def self.new_by_name(title) #class constructor
+    song = self.new
+    song.name = title
     song
-  end 
-  
-  def self.create_by_name(song_title)
+  end
+
+  def self.create_by_name(title) #class constructor
     song = self.create
-    song.name = song_title
-    song.save
-  end 
+    song.name = title
+    song
+  end
 
   def self.new_from_filename(filename)
     song_attributes = filename.split("-")
