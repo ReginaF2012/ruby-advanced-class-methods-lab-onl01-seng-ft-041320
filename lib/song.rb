@@ -53,7 +53,7 @@ class Song
     song_attributes = filename.split(".mp3").join(" ").split(" - ")
     song = self.new
     song.name = song_attributes[1]
-    song.artist_name = song_attributes[1]
+    song.artist_name = song_attributes[0]
     song
   end
 end
