@@ -22,7 +22,7 @@ class Song
   end 
 
   def self.new_from_filename(filename)
-    song_attributes = filename.split(/\s)
+    song_attributes = filename.split(/\s|-|.)
  
       song = self.new
       
