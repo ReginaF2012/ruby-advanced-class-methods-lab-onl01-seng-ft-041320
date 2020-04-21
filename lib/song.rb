@@ -50,7 +50,7 @@ class Song
     end
     
   def self.new_from_filename(filename)
-    song_attributes = filename.split(".").join(" ").split(" - ")
+    song_attributes = filename.split(".mp3").join(" ").split(" - ")
     song_attributes.pop
     song = self.new
     song.name = song_attributes
