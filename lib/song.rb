@@ -36,6 +36,15 @@ class Song
       end
     end 
   end 
+  
+  def self.find_or_create_by_name(song_name)
+    @@all.find do |song|
+      if song == self.find_by_name(song_name)
+      else
+        self.create_by_name(song_name)
+      end 
+    end 
+  end 
     
   def self.new_from_filename(filename)
     song_attributes = filename.split("-")
