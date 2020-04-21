@@ -51,7 +51,7 @@ class Song
     
   def self.new_from_filename(filename)
     song_attributes = filename.split(" - ")
-    song_attributes.join
+    song_attributes.flatten
     song_attributes.split(".")
     song = self.new
     song.name = song_attributes[]
