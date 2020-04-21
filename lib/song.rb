@@ -26,7 +26,7 @@ class Song
     song = self.new 
     song.name = song_name
     @@all << song_name
-    song
+    song_name
   end 
 
   def self.new_from_filename(filename)
